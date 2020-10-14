@@ -1,0 +1,15 @@
+apiVsersion: apps/v1
+kind: Pod
+metadata:
+  name: pod-with-pvc
+spec:
+  containers:
+    - name: redis
+      image: redis
+      volumeMounts:
+      - mountPath: /tmp
+        name: pvc001
+  volumes:
+    - name: pvc001
+      persistentVolumeClaim:
+        claimName: pv002-claim0
