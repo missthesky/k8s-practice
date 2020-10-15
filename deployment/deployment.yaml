@@ -9,7 +9,7 @@ spec:
       app: myredis
   template:
     metadata:
-      lables:
+      labels:
         app: myredis
     spec:
       containers:
