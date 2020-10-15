@@ -18,8 +18,10 @@ spec:
         ports:
         - name: tcp
           containerPort: 6379
-        readinessProbe:
-          httpGet:
-            port: 6379
-          periodSeconds: 1
+      livenessPorbe:
+        httpGet:
+          path: /
+          port: 6379
+        initialDelaySeconds: 3
+        periodSeconds: 3
     
