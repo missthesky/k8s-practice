@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pv002-claim0
+  name: pv001-claim0
 spec:
   accessModes:
     - ReadWriteOnce
@@ -10,4 +10,5 @@ spec:
     requests:
       storage: 10Mi
   storageClassName: slow
+  volumeName: pv001
   
