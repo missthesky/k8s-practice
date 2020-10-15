@@ -18,10 +18,10 @@ spec:
         ports:
         - name: tcp
           containerPort: 6379
-      livenessPorbe:
-        httpGet:
-          path: /
-          port: 6379
-        initialDelaySeconds: 3
-        periodSeconds: 3
+        livenessPorbe:
+          httpGet:
+            path: /
+            port: 6379
+          initialDelaySeconds: 3
+          periodSeconds: 3
     
