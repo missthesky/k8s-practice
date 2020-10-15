@@ -15,8 +15,8 @@ spec:
       containers:
         - image: redis
           name: myredis
-      readinessProbe:
-        httpGet:
-          port: 6379
-        periodSeconds: 1
+        readinessProbe:
+          httpGet:
+            port: 6379
+          periodSeconds: 1
     
