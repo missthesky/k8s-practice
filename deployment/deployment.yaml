@@ -13,8 +13,8 @@ spec:
         app: myredis
     spec:
       containers:
-        - image: redis
-          name: myredis
+      - image: redis
+        name: myredis
         readinessProbe:
           httpGet:
             port: 6379
