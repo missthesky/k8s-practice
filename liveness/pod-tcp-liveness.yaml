@@ -9,15 +9,16 @@ spec:
   - name: tcp-liveness
     image: k8s.gcr.io/goproxy:0.1
     ports:
-    - containerPort: 8080
+    - name: liveness-port
+      containerPort: 8080
     readinessProbe:
       tcpSocket:
-        port: 8080
+        port: liveness-port
       initialDelaySeconds: 5
       periodSeconds: 10
     livenessProbe:
       tcpSocket:
-        port: 8080
+        port: liveness-port
       initialDelaySeconds: 5
       periodSeconds: 10
     
