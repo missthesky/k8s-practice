@@ -10,7 +10,7 @@ spec:
     image: goproxy
     ports:
     - containerPort: 8080
-    readnessProbe:
+    readinessProbe:
       tcpSocket:
         port: 8080
       initialDelaySeconds: 5
