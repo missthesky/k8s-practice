@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-tcp-liveness
+  labels:
+    test: tcp-liveness
+spec:
+  containers:
+  - name: tcp-liveness
+    image: goproxy
+    ports:
+    - containerPort: 8080
+    readnessProbe:
+      tcpSocket：
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    livenessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    
