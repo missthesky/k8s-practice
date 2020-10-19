@@ -23,7 +23,7 @@ spec:
       failureThreshold: 3
       periodSeconds: 10
     startupProbe:
-      httpGet:
+      tcpSocket:
         port: liveness-port
       failureThreshold: 30
       periodSeconds: 10
