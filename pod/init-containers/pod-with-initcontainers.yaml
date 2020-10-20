@@ -8,7 +8,7 @@ spec:
   containers:
   - name: mypod
     image: busybox:1.28
-    commond: ['sh' '-c' 'cat /tmp/tmp.txt && sleep 64000000']
+    command: ['sh' '-c' 'cat /tmp/tmp.txt && sleep 64000000']
     volumeMounts:
     - name: mydir
       mountPath: /tmp
