@@ -13,3 +13,4 @@ spec:
     image: redis
   - name: busybox
     image: busybox
+  restartPolicy: Never
