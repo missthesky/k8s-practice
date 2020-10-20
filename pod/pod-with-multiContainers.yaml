@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata：
+  name: multilContainersPod
+  labels:
+    app: test
+  namespace: default
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  - name: redis
+    image: redis
+  - name: busybox
+    image: busybox
