@@ -6,16 +6,16 @@ metadata:
     app: testapp
 spec:
   containers:
-  - name: mypod
+  - name: my-container
     image: busybox:1.28
-    command: ['sh' '-c' 'cat /tmp/tmp.txt && sleep 64000000']
+    command: ['sh', '-c', 'cat /tmp/tmp.txt && sleep 64000000']
     volumeMounts:
     - name: mydir
       mountPath: /tmp
   initContainers:
   - name: init-tmp
     image: busybox:1.28
-    command: ['sh' '-c' 'touch /tmp/tmp.txt']
+    command: ['sh', '-c', 'touch /tmp/tmp.txt']
     volumeMounts:
     - name: mydir
       mountPath: /tmp
