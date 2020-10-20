@@ -1,0 +1,24 @@
+apiversion: v1
+kind: Pod
+metadata:
+  name: pod-with-initcontainers
+  labels:
+    app: testapp
+spec:
+  containers:
+  - name: mypod
+    image: busybox:1.28
+    commond: ['sh' '-c' 'cat /tmp/tmp.txt && sleep 64000000']
+    volumeMounts:
+    - name: mydir
+      mountPath: /tmp
+  initContainers:
+  - name: init-tmp
+    image: busybox:1.28
+    command: ['sh' '-c' 'touch /tmp/tmp.txt']
+    volumeMounts:
+    - name: mydir
+      mountPath: /tmp
+  volumes:
+  - name: mydir
+    emptyDir: {}
