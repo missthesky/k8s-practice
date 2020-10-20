@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: Service
-metada:
+metadata:
   name: myservice
 spec:
   ports:
@@ -9,7 +9,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metada:
+metadata:
   name: mydb
 spec:
   ports:
