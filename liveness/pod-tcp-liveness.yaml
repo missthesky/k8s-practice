@@ -26,4 +26,4 @@ spec:
       tcpSocket:
         port: liveness-port
       failureThreshold: 30
-      periodSeconds: 10
+      periodSeconds: 8
