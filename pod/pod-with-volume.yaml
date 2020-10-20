@@ -6,9 +6,9 @@ spec:
   containers:
   - name: my-container
     image: nginx
-    volumMounts:
+    volumeMounts:
     - name: chache-volume
-      path: /data
+      mountPath: /data
   volumes:
   - name: chache-volume
     emptyDir: {}
