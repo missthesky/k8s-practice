@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+spec:
+  containers:
+  - name: my-container
+    image: nginx
+  volumMounts:
+  - name: chache-volume
+    path: /data
+  volumes:
+  - name: chache-volume
+    emptyDir: {}
+  
