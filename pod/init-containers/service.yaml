@@ -1,0 +1,18 @@
+apiVsersion: v1
+kind: Service
+metada:
+  name: myservice
+spec:
+  ports:
+  - protocol: TCP
+    targetPort: 9376
+---
+apiVsersion: v1
+kind: Service
+metada:
+  name: mydb
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9377
