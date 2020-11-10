@@ -12,6 +12,6 @@ spec:
     volumeMounts:
     - mountPath: /tmp
       name: scratch-storage
-  volume:
+  volumes:
   - name: scratch-storage
     emptyDir: {}
