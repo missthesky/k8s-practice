@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolume
-medatada:
-  name: logcal1G
+metadata:
+  name: local1g
   labels:
     app: localpv
 spec:
   accessModes:
-    - ReadWriteOnece
+    - ReadWriteOnce
   capacity:
     storage: 1Gi
   hostPath:
