@@ -1,0 +1,18 @@
+apiVsersion: v1
+kind: Pod
+metadata:
+  name: nslookup
+  labels:
+    app: nslookup
+spec:
+  containers:
+  - image: busybox
+    name: busybox
+    command: ["sleep","3600"]
+    resources:
+      requests:
+        cpu: "0.1"
+        memory: "10Mi"
+      limits:
+        cpu: "0.1"
+        memory: "10Mi"
