@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-emptydir
+  labels:
+    app: emptydir
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ["sleep","3600"]
+    volumeMounts:
+    - mountPath: /tmp
+      name: scratch-storage
+  volume:
+  - name: scratch-storage
+    emptyDir: {}
