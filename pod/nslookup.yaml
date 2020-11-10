@@ -1,4 +1,4 @@
-apiVsersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: nslookup
