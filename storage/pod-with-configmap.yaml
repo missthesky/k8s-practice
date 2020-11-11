@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-configmap
+  labels:
+    app: pod-with-configmap
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.18
+    env:
+    - name: ilike
+      valueFrom:
+        configMapKeyRef:
+          name: colors
+          key: favorite
+   
