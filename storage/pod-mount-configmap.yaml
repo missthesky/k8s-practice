@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-mount-configmap
+  labels:
+    app: pod-mount-configmap
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.18
+    volumeMounts:
+    - name: car
+      mountPath: /etc/car
+  volumes:
+  - name: car
+    configMap:
+      name: fastcar
+    
