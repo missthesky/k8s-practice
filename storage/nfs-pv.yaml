@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfspv001
+spec:
+  nfs:
+    path: /opt/swr
+    server: 192.168.233.108
+    readOnly: false
+  capacity:
+    storage: 1Gi
+  accessModes: 
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
