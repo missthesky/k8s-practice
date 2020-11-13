@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations: 
+    kubernetes.io/ingress.class: "nginx"
+  name: ghost-ingress
+  namespace: default
+spec:
+  rules:
+  - host: ghost.192.168.233.108.xip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ghost
+          servicePort: 2368
