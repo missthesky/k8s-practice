@@ -16,5 +16,4 @@ spec:
     value: "v"
     operator: "Equal"
     effect: "NoSchedule"
-    dnsPolicy: ClusterFirst
   restartPolicy: Always
